@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CSS3 Regions - Simple Example</title>
+<script src="javascript/Modernizr.css-region.js"></script>
+<link rel="stylesheet" href="css/styles.css">
+<style type="text/css">
+
+/* example-1 */
+
+#example-1 .main_content {
+  -webkit-flow-into: example-1-text;
+}
+
+#example-1 .regions > div {
+  /* Is the line below needed? */
+  content:-webkit-from-flow('example-1-text');
+  -webkit-flow-from: example-1-text;    
+  width: 150px;
+  height: 150px;
+  border: 3px solid #000;
+  margin: 20px;
+  float: left;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+#example-1 .regions div:nth-child(1) {
+  background: rgba(91, 192, 222, 0.8);
+}
+
+#example-1 .regions div:nth-child(2) {
+  background: rgba(91, 192, 222, 0.5);
+}
+
+#example-1 .regions div:nth-child(3) {
+  background: rgba(91, 192, 222, 0.2);
+}
+
+
+
+
+/* example-2 */
+
+#example-2 .main_content {
+  -webkit-flow-into: example-2-text;
+}
+
+#example-2 .regions > div {
+  content:-webkit-from-flow('example-2-text');
+  -webkit-flow-from: example-2-text;
+  width: 20%;
+  height: 150px;
+  border: 3px solid #000;
+  margin: 20px;
+  float: left;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+#example-2 .regions div:nth-child(1) {
+  background: rgba(91, 192, 222, 0.8);
+}
+
+#example-2 .regions div:nth-child(2) {
+  background: rgba(91, 192, 222, 0.5);
+}
+
+#example-2 .regions div:nth-child(3) {
+  background: rgba(91, 192, 222, 0.2);
+}
+
+
+
+
+
+
+
+
+
+/* example-3 */
+
+#example-3 .main_content {
+  -webkit-flow-into: example-3-text;
+}
+
+#example-3 section > div {
+  content:-webkit-from-flow('example-3-text');
+  -webkit-flow-from: example-3-text;
+  width: 80%;
+  height: 150px;
+  border: 3px solid #000;
+  margin: 20px 20px 0 20px;
+  padding: 10px 10px 0 10px;
+  border-radius: 8px 8px 0 0;
+}
+
+#example-3 .regions > section {
+  float: left;
+  width: 20%;
+}
+
+#example-3 .region-status {
+  background: #DFF0D8;;
+  border: 3px solid #000;
+  border-top: none;
+  margin: 0 20px 0 20px;
+  padding: 5px 10px 5px 10px;
+  width: 80%;
+  border-radius: 0 0 8px 8px;
+}
+
+#example-3 #region1 > div {
+  background: rgba(91, 192, 222, 0.8);
+}
+
+#example-3 #region2 > div {
+  background: rgba(91, 192, 222, 0.5);
+}
+
+#example-3 #region3 > div {
+  background: rgba(91, 192, 222, 0.2);
+}
+
+#example-3 #region-details {
+  overflow: hidden;
+  clear: both;  
+}
+
+
+
+
+
+
+
+
+/* example-4 */
+
+#example-4 .main_content {
+  -webkit-flow-into: example-4-text;
+}
+
+#example-4 .regions > div {
+  content:-webkit-from-flow('example-4-text');
+  -webkit-flow-from: example-4-text;
+  width: 20%;
+  height: 150px;
+  border: 3px solid #000;
+  margin: 20px;
+  float: left;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+#example-4 .regions div:nth-child(1) {
+  background: rgba(91, 192, 222, 0.8);
+}
+
+#example-4 .regions div:nth-child(2) {
+  background: rgba(91, 192, 222, 0.7);
+}
+
+#example-4 .regions div:nth-child(3) {
+  background: rgba(91, 192, 222, 0.6);
+}
+
+#example-4 .regions div:nth-child(4) {
+  background: rgba(91, 192, 222, 0.5);
+}
+
+#example-4 .regions div:nth-child(5) {
+  background: rgba(91, 192, 222, 0.4);
+}
+
+#example-4 .regions div:nth-child(6) {
+  background: rgba(91, 192, 222, 0.3);
+}
+
+#example-4 .regions div:nth-child(7) {
+  background: rgba(91, 192, 222, 0.2);
+}
+
+
+</style>
+
+</head>
+
+<body>
+
+
+
+<aside class="region-message">
+<p>Hi, this page uses <a href="http://modernizr.com/">Modernizr</a> to detect support for <a href="http://dev.w3.org/csswg/css3-regions/">CSS Regions</a> which appears to be unsupported by this browser. If you would like to view the demos, check out <a href="http://caniuse.com/css-regions">browser support for CSS regions</a> and try using a supported browser.</p>
+</aside>
+
+
+
+<header id="page-header">
+  <h1 id="title">Simple CSS3 Region Examples</h1>
+  <h2 id="link-to-article">
+    <a href="http://net.tutsplus.com/category/tutorials/">Back to Nettuts article</a>
+  </h2>
+</header>
+
+
+
+
+
+<article class="example" id="example-1">
+
+  <header>
+    <h1>Example 1 - Flowing into 3 regions with fixed widths</h1>
+    <p>In this example, we flow a chunk of text all stored within one div. This text is then put into a flow which is then retrieved from 3 region divs.</p>
+  </header>
+
+  <div class="main_content">
+  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+  </div>
+
+  <div class="regions">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div> <!-- .regions -->
+
+</article> <!-- #example-1 -->
+
+
+
+
+<article class="example" id="example-2">
+
+  <header>
+    <h1>Example 2 - Flowing into 3 regions with fluid widths</h1>
+    <p>In example #2 we take a similar chunk of text all contained within one div and put it into a flow. We then have 3 divs which "flow-from" the named flow we just made. The 3 region divs have their widths set at 20%. </p>
+    <p><strong>Tip:</strong>Try resizing your browser and take notice of how the text flows within the boxes</p>
+  </header>
+
+  <div class="main_content">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </div>
+
+  <div class="regions">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div> <!-- .regions -->
+
+</article> <!-- #example-2 -->
+
+
+
+
+
+<article class="example" id="example-3">
+
+  <header>
+    <h1>Example 3 - Using the JavaScript API for Regions</h1>
+    <p>In some browsers it is possible to call element.regionOverflow (try webkitRegionOverflow in Webkit) which can return values such as 'fit', 'empty' or 'overflow', where element is an element which is a region. </p>
+    <p><strong>Tip: </strong>Try resizing your browser to see how the regionOverflow changes per region </p>
+  </header>
+
+  <div class="main_content">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+  </div>
+
+  <div class="regions">
+
+    <section id="region1">
+      <div></div>
+      <p class="region-status"></p>
+    </section>
+
+    <section id="region2">
+      <div></div>
+      <p class="region-status"></p>
+    </section>
+
+    <section id="region3">
+      <div></div>
+      <p class="region-status"></p>
+    </section>   
+
+  </div> <!-- .regions -->
+
+  <section id="region-details">
+    <p>(Where named_flow is document.webkitGetFlowByName('example-3-text')</p>
+    <ul></ul>
+  </section>
+
+</article> <!-- #example-3 -->
+
+
+
+
+
+
+
+
+
+<article class="example" id="example-4">
+
+  <header>
+    <h1>Example 4 - Using text and images with regions</h1>
+    <p>Here we can see how browsers treat images within regions, you may notice how images get cut off where necessary. The source content is a bunch of images of varying dimensions, text in paragraph tags and an unordered list.</p>
+    <p><strong>Note: </strong>Image dimensions are always directly in the middle so you should be able to tell where they begin and where they end (which can look odd when they're split across multiple regions)</p>
+  </header>
+
+  <div class="main_content">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+
+  <img src="images/50x50.gif" alt="placeholder image">
+  <ul>
+    <li>List item #1</li>
+    <li>List item #2</li>
+  </ul>
+  <img src="images/50x50.gif" alt="placeholder image">
+  <img src="images/50x50.gif" alt="placeholder image">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  <img src="images/50x50.gif" alt="placeholder image">
+  <img src="images/50x50.gif" alt="placeholder image">
+  <img src="images/100x100.gif" alt="placeholder image">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  <img src="images/150x150.gif" alt="placeholder image">
+  <img src="images/200x200.gif" alt="placeholder image">
+
+  </div>
+
+  <div class="regions">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div> <!-- .regions -->
+
+</article> <!-- #example-4 -->
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+//This function is for example 3, on the window resize event we use the region API to find out the status of the regions
+var checkRegionStatus = function () {
+  var regions = document.querySelectorAll('#example-3 section > div');
+  var regionsLength = regions.length;
+  var i = 0;
+  for ( ; i < regionsLength; i++) {
+    var region = regions[i];
+    region.nextElementSibling.innerHTML = "webkitRegionOverflow: <strong>" + region.webkitRegionOverflow + "</strong>"
+  }
+
+  var example3Source = document.querySelector('#example-3 .main_content')
+  var example3Flow = document.webkitGetFlowByName('example-3-text');
+  var regionDetails = document.querySelector('#region-details ul');
+  var regionsByContentNode = example3Flow.getRegionsByContentNode(example3Source);
+
+  var detailsString = "<li>Number of divs being used as regions: <strong>"  + regionsByContentNode.length + "</strong> (using named_flow.getRegionsByContentNode)</li>" ;
+  detailsString += "<li>Class name of the content node of which the regions get content from: <strong>" + example3Flow.contentNodes[0].className + "</strong> (using named_flow.contentNodes[0].className)</li>";
+  regionDetails.innerHTML = detailsString;
+
+};
+
+var autorun = function() {
+
+  //example-3
+  checkRegionStatus();
+  window.addEventListener('resize', function() {
+    checkRegionStatus();
+  }, false);
+
+};
+
+if (document.addEventListener) document.addEventListener("DOMContentLoaded", autorun, false);
+else if (document.attachEvent) document.attachEvent("onreadystatechange", autorun);
+else window.onload = autorun;
+
+</script>
+
+</body>
+</html>

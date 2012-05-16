@@ -1,0 +1,69 @@
+/* GENERAL STYLES */
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 20px 50px;
+  font-size: 15px;
+}
+
+#page-header {
+  margin-top: 40px;
+}
+
+#title {
+  font-size: 18px;
+}
+
+#link-to-article {
+  font-size: 15px;
+}
+
+#link-to-article a{
+  padding: 3px 0 10px 35px;
+  background: url(../images/nettuts-logo.jpg) no-repeat;
+  display: inline-block;
+}
+
+.example {
+  min-height: 20px;
+  padding: 10px;
+  margin-bottom: 55px;
+  background-color: whiteSmoke;
+  border: 1px solid #EEE;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.example header h1, .example header p {
+  margin: 5px;
+  padding: 0;
+  font-size: 19px;
+}
+
+.example header p {
+  font-size: 15px;
+}
+
+.region-message {
+  color: #3A87AD;
+  background-color: #D9EDF7;
+  border-color: #BCE8F1;  
+  padding: 8px 35px 8px 14px;
+  margin-bottom: 18px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  background-color: #FCF8E3;
+  border: 1px solid #FBEED5;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  display: none;
+}
+
+.feature-no-regions .region-message {
+  display: block;
+}
