@@ -141,6 +141,10 @@
   -webkit-flow-into: example-4-text;
 }
 
+#example-4-main-content-image {
+  -webkit-flow-into: example-4-text;
+}
+
 #example-4 .regions > div {
   content:-webkit-from-flow('example-4-text');
   -webkit-flow-from: example-4-text;
@@ -183,6 +187,20 @@
 
 
 </style>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31819122-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
 
 </head>
 
@@ -308,25 +326,25 @@
   </header>
 
   <div class="main_content">
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
 
-  <img src="images/50x50.gif" alt="placeholder image">
-  <ul>
-    <li>List item #1</li>
-    <li>List item #2</li>
-  </ul>
-  <img src="images/50x50.gif" alt="placeholder image">
-  <img src="images/50x50.gif" alt="placeholder image">
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-  <img src="images/50x50.gif" alt="placeholder image">
-  <img src="images/50x50.gif" alt="placeholder image">
-  <img src="images/100x100.gif" alt="placeholder image">
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-  <img src="images/150x150.gif" alt="placeholder image">
-  <img src="images/200x200.gif" alt="placeholder image">
+    <img src="images/50x50.gif" alt="placeholder image">
+    <ul>
+      <li>List item #1</li>
+      <li>List item #2</li>
+    </ul>
+    <img src="images/50x50.gif" alt="placeholder image">
+    <img src="images/50x50.gif" alt="placeholder image">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <img src="images/50x50.gif" alt="placeholder image">
+    <img src="images/50x50.gif" alt="placeholder image">
+    <img src="images/100x100.gif" alt="placeholder image">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <img src="images/150x150.gif" alt="placeholder image">
 
-  </div>
+  </div> <!-- .main_content -->
+  <img id="example-4-main-content-image" src="images/200x200.gif" alt="placeholder image">
 
   <div class="regions">
     <div></div>
